@@ -1,7 +1,6 @@
 <img src="./logo.png" align="left" width="120" height="120" alt="Logger Logo">
 
 # Logger
-[![Version](https://img.shields.io/github/tag-pre/Macro303/Logger.svg?label=version&style=flat-square)](https://github.com/Macro303/Logger/releases)
 [![Issues](https://img.shields.io/github/issues/Macro303/Logger.svg?style=flat-square)](https://github.com/Macro303/Logger/issues)
 [![Contributors](https://img.shields.io/github/contributors/Macro303/Logger.svg?style=flat-square)](https://github.com/Macro303/Logger/graphs/contributors)
 [![License](https://img.shields.io/github/license/Macro303/Logger.svg?style=flat-square)](https://opensource.org/licenses/MIT)
