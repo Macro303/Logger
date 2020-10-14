@@ -9,10 +9,8 @@ class ColouredFormatter(Formatter):
         logging.DEBUG: 32,  # Green
         logging.INFO: 37,  # White
         logging.WARNING: 33,  # Yellow
-        logging.WARN: 33,  # Yellow
         logging.ERROR: 31,  # Red
         logging.CRITICAL: 35,  # Magenta
-        logging.FATAL: 35  # Magenta
     }
     PREFIX = '\033['
     SUFFIX = '\033[0m'

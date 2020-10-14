@@ -35,7 +35,5 @@ def init_logger(project: str, file_level = logging.DEBUG, console_level = loggin
     logger.log(logging.DEBUG, 'DEBUG is Visible')
     logger.log(logging.INFO, 'INFO is Visible')
     logger.log(logging.WARNING, 'WARNING is Visible')
-    logger.log(logging.WARN, 'WARN is Visible')
     logger.log(logging.ERROR, 'ERROR is Visible')
     logger.log(logging.CRITICAL, 'CRITICAL is Visible')
-    logger.log(logging.FATAL, 'FATAL is Visible')
