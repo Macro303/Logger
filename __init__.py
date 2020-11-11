@@ -14,7 +14,7 @@ def init_logger(project: str, file_level = logging.DEBUG, console_level = loggin
 
     if show_console:
         stream_logger = logging.StreamHandler()
-        stream_logger.setLevel(logging.INFO)
+        stream_logger.setLevel(console_level)
         coloured_formatter = ColouredFormatter(
             fmt='[%(asctime)s] [%(levelname)-8s] {%(name)s:%(filename)s} | %(message)s'
         )
@@ -23,7 +23,7 @@ def init_logger(project: str, file_level = logging.DEBUG, console_level = loggin
 
     LOG_DIR.mkdir(exist_ok=True)
     file_logger = logging.FileHandler(filename=LOG_DIR.joinpath(f"{project}.log"), encoding='UTF-8')
-    file_logger.setLevel(logging.DEBUG)
+    file_logger.setLevel(file_level)
     formatter = logging.Formatter(
         fmt='[%(asctime)s] [%(levelname)-8s] {%(name)s:%(filename)s:%(lineno)d} | %(message)s'
     )
