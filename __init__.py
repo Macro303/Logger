@@ -16,7 +16,7 @@ def init_logger(project: str, file_level = logging.DEBUG, console_level = loggin
         stream_logger = logging.StreamHandler()
         stream_logger.setLevel(console_level)
         coloured_formatter = ColouredFormatter(
-            fmt='[%(asctime)s] [%(levelname)-8s] {%(name)s:%(filename)s} | %(message)s'
+            fmt='[%(asctime)s] [%(levelname)-8s] {%(name)s} | %(message)s'
         )
         stream_logger.setFormatter(coloured_formatter)
         root.addHandler(stream_logger)
