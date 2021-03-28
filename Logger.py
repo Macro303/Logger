@@ -2,6 +2,7 @@
 import logging
 from logging import Formatter
 from pathlib import Path
+from colorama import init
 
 TOP_DIR = Path(__file__).resolve().parent.parent
 LOG_DIR = TOP_DIR.joinpath('logs')
@@ -31,6 +32,7 @@ def init_logger(project: str, file_level=logging.DEBUG, console_level=logging.IN
     logger = logging.getLogger(__name__)
 
     if show_console:
+        init()
         stream_logger = logging.StreamHandler()
         stream_logger.setLevel(console_level)
         stream_logger.setFormatter(ColouredFormatter())

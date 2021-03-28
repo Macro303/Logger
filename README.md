@@ -7,7 +7,8 @@ My customized, coloured Logger used as a Github Submodule for all my Python proj
 
 ## Built Using
  - [Python: 3.9.1](https://www.python.org/)
- - [pip: 20.3.3](https://pypi.org/project/pip/)
+ - [pip: 21.0.1](https://pypi.org/project/pip/)
+ - [colorama: 0.4.4](https://pypi.org/project/pip)
 
 ## Socials
-[![Discord | The Playground](https://discord.com/api/v6/guilds/618581423070117932/widget.png?style=banner2)](https://discord.gg/nqGMeGg)  
+[![Discord | The DEV Environment](https://invidget.switchblade.xyz/618581423070117932)](https://discord.gg/nqGMeGg)  
