@@ -2,6 +2,7 @@
 import logging
 from logging import Formatter
 from pathlib import Path
+
 from colorama import init
 
 TOP_DIR = Path(__file__).resolve().parent.parent
