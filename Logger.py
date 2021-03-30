@@ -34,7 +34,7 @@ def init_logger(project: str, file_level=logging.DEBUG, console_level=logging.IN
     logger = logging.getLogger(__name__)
 
     if show_console:
-        init(autoreset=True)
+        init(autoreset=True, strip=False)
         stream_logger = logging.StreamHandler()
         stream_logger.setLevel(console_level)
         stream_logger.setFormatter(ColouredFormatter())
