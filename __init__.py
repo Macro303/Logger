@@ -1,1 +1,1 @@
-from .Logger import init_logger
+from .PyLogger import init

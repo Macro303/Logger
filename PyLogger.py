@@ -3,7 +3,7 @@ import logging
 from logging import Formatter
 from pathlib import Path
 
-from colorama import init, Fore, Style
+from colorama import init as c_init, Fore, Style
 
 TOP_DIR = Path(__file__).resolve().parent.parent
 LOG_DIR = TOP_DIR.joinpath('logs')
@@ -17,24 +17,21 @@ class ColouredFormatter(Formatter):
         logging.ERROR: Fore.RED,
         logging.CRITICAL: Fore.MAGENTA
     }
-    # PREFIX = '\033['
-    # SUFFIX = '\033[0m'
     FORMAT = '[%(asctime)s] [%(levelname)-8s] {%(name)s} | %(message)s'
 
     def format(self, record):
         seq = self.MAPPING.get(record.levelno, Style.RESET_ALL)  # Default INFO
-        # log_fmt = '{0}{1}m{2}{3}'.format(self.PREFIX, seq, self.FORMAT, self.SUFFIX)
         log_fmt = f"{seq}{self.FORMAT}"
         formatter = logging.Formatter(fmt=log_fmt, datefmt='%Y-%m-%d %H:%M:%S')
         return formatter.format(record)
 
 
-def init_logger(project: str, file_level=logging.DEBUG, console_level=logging.INFO, show_console: bool = True) -> None:
+def init(project: str, file_level=logging.DEBUG, console_level=logging.INFO, show_console: bool = True) -> None:
     root = logging.getLogger()
     logger = logging.getLogger(__name__)
 
     if show_console:
-        init(autoreset=True, strip=False)
+        c_init(autoreset=True, strip=False)
         stream_logger = logging.StreamHandler()
         stream_logger.setLevel(console_level)
         stream_logger.setFormatter(ColouredFormatter())
