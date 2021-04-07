@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import logging
 from logging import Formatter
 from pathlib import Path
@@ -28,7 +27,7 @@ class ColouredFormatter(Formatter):
 
 def init(project: str, file_level=logging.DEBUG, console_level=logging.INFO, show_console: bool = True) -> None:
     root = logging.getLogger()
-    logger = logging.getLogger(__name__)
+    logger = logging.getLogger('PyLogger')
 
     if show_console:
         c_init(autoreset=True, strip=False)
